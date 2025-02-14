@@ -161,7 +161,7 @@ header .navbar a:hover {
   top: 200px;  /* Distance from the bottom of the screen */
   right: 20px;   /* Distance from the right side of the screen */
   z-index: 1000; /* Ensure they are always on top of other elements */
-  margin-top: 600px;
+  margin-top: 570px;
 }
 
 .fixed-icons .icon {
