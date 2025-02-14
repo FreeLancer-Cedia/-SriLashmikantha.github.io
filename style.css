@@ -1,0 +1,943 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
+:root{
+  --anycolor:#0062ff;
+}
+
+*{
+  font-family: "Poppins", sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: none;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--anycolor);
+  color:#fff;
+}
+
+
+.contact-info {
+  font-size: 16px;
+  background-color: #3673b5c0;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between icons */
+  text-align: right; /* Ensure the text is also centered */
+  flex-wrap: wrap; /* Allow wrapping if needed */
+  margin: 0 auto; /* Center the container itself */
+  
+  /* Fixed positioning */
+  position: fixed; /* Makes the contact-info stay fixed on the screen */
+  top: 0; /* Position it at the top of the page */
+  left: 0; /* Position it at the left edge of the screen */
+  width: 100%; /* Ensures it spans across the whole width */
+  z-index: 9999; /* Keeps it on top of other content */
+  padding: 3px ; /* Adjust padding for top and bottom */
+  margin-bottom: 50px; /* Adjust the value to control the space */
+}
+
+.contact-info a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info i {
+  margin-right: 5px; /* Space between icon and text */
+  color: black; /* Icon color */
+}
+
+/* Social media icons */
+.contact-info .fab {
+  font-size: 20px;
+}
+
+
+/* Ensure the container takes full width to center items */
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  height: 100vh; /* Full height */
+}
+
+
+
+
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding:2rem 9%;
+}/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body Background */
+body {
+  background-color: #f7f7f7;
+  
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 5%;
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;  /* Make sure it's fixed at the top */
+  top: 0;  /* Stick to the top of the page */
+  left: 0;  /* Align it to the left */
+  right: 0;  /* Ensure it spans the full width */
+  z-index: 1000;  /* Keep it on top of other elements */
+  width: 100%;  /* Ensure it takes up the full width of the page */
+  margin-top: 20px; /* Adjust the value to control the space */
+  
+}
+
+
+.logo img {
+  max-width: 350px; /* Adjust this value as needed */
+  height: auto; /* Keep the aspect ratio of the logo */
+}
+
+
+/* Global overflow hidden for body and html */
+html, body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+}
+
+
+/* Other parts of the CSS remain the same */
+
+
+header .navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  text-transform: capitalize;
+  font-weight: 100;
+  display: inline-block;
+}
+
+header .navbar a:hover {
+  background-color: black;
+  color: #fff;
+  border-radius: 4px;
+}
+
+/* Mobile Menu Icon */
+#menu-bar {
+  font-size: 30px;
+  color: #fff;
+  display: none;
+  cursor: pointer;
+}
+
+/* General Styles for Fixed Icons */
+.fixed-icons {
+  position: fixed;
+  top: 200px;  /* Distance from the bottom of the screen */
+  right: 20px;   /* Distance from the right side of the screen */
+  z-index: 1000; /* Ensure they are always on top of other elements */
+}
+
+.fixed-icons .icon {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.fixed-icons .icon img {
+  width: 50px;  /* Adjust icon size */
+  height: 50px; /* Adjust icon size */
+  border-radius: 50%;  /* Make icons circular */
+  background-color: #fff;  /* Add background to the icon */
+  padding: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);  /* Slight shadow effect */
+}
+
+.fixed-icons .icon:hover {
+  transform: scale(1.1);  /* Scale up on hover */
+}
+
+
+/* Optional: Customize individual icons' colors 
+.fixed-icons .whatsapp img {
+  background-color: #25D366; /* WhatsApp color 
+}
+
+
+.fixed-icons .phone img {
+  background-color: #34b7f1; 
+}
+
+.fixed-icons .email img {
+  background-color: black; 
+}*/
+
+
+
+
+
+
+
+
+
+/* Home Section */
+.home {
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding: 0 20px;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 120px; /* Adjust this value based on your header height */
+}
+
+
+.home .content h3 {
+  font-size: 3.5rem;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #000000;
+  margin-bottom: 1rem;
+}
+
+.home .content p {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+  margin: 0.5rem 0;
+}
+
+.home .img-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  filter: brightness(50%);
+  transition: opacity 1s ease-in-out;
+}
+
+/* Controls for Image Navigation (Dot Navigation) */
+.home .controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+}
+
+.home .controls .img-btn {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.home .controls .img-btn.active {
+  background-color: #ff9800;
+}
+
+/* Image Hover Effect */
+.home .img-container img:hover {
+  filter: brightness(70%);
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 991px) {
+  .home .content h3 {
+    font-size: 3rem;
+  }
+
+  .home .content p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home .content p {
+    font-size: 1.2rem;
+  }
+
+  /* Show the menu icon */
+  #menu-bar {
+    display: block;
+    color: black;
+  }
+
+  /* Navbar style for mobile */
+  .navbar {
+    display: none; /* Hide the navbar by default */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .navbar.active {
+    display: flex; /* Show the navbar when the 'active' class is added */
+  }
+
+  /* Navbar links */
+  .navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    width: 100%;
+  }
+
+  .navbar a:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Center the h1 element (PACKAGES) */
+.heading {
+  display: flex;
+  justify-content: center;  /* Center horizontally */
+  align-items: center;      /* Center vertically */
+  text-align: center;       /* Center text */
+  font-size: 4rem;          /* Adjust the font size */
+  color: #333;              /* Text color */
+  margin: 2rem 0;           /* Add top and bottom margins to reduce extra space */
+}
+
+/* Optional: Adjust the span inside the heading */
+.heading span {
+  font-size: 4rem;          /* Make the text larger if desired */
+  color: #0062ff;           /* Customize the color of the span */
+  font-weight: 700;          /* Make the text bold */
+}
+/* Section Styling */
+.packages {
+  padding: 50px 0;
+  background-image: url('images/Service.png'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: keeps the background fixed when scrolling */
+  text-align: center;
+  width: 100%;
+  min-height: 55vh; /* Set height to 55vh */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center content */
+  position: relative; /* Allows positioning of heading over content */
+  
+}
+
+/* Heading Styling */
+.packages .heading {
+  font-size: 36px;
+  margin-bottom: 200px;
+  color: #fff;  /* White color for heading */
+  position: absolute; /* Position the heading over the images */
+  top: 40px;  /* Adjust top margin for better positioning */
+  left: 50%;
+  transform: translateX(-50%); /* Center the heading horizontally */
+  z-index: 10; /* Ensure the heading is above other content */
+}
+
+/* Move the span element inside h1 down */
+ .heading span {
+  color: black;
+  position: relative;
+  top: 30px; /* Adjust this value to move the span down */
+}
+
+
+/* Box Container Styling */
+.packages .box-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin-top: 20px;
+  position: relative; /* This allows the heading to overlay above */
+}
+
+/* Individual Box Styling */
+.packages .box {
+  width: 250px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.packages .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Content Styling */
+.packages .box .content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.packages .box:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.packages .box h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.packages .box i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Hover Effects for Box */
+.packages .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.packages .box:hover img {
+  transform: scale(1.1);
+}
+
+/* Centering the Section */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.packages {
+  width: 100%;
+  min-height: 55vh; /* Maintain 55vh height */
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center content */
+  position: relative;
+  margin-top: 100px;
+}
+
+/* Responsive Layout for Small Screens */
+@media (max-width: 768px) {
+  .packages .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .packages .box {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Services Section Styling with Full-Screen Background */
+.services {
+  padding: 0; /* Remove padding so the section covers the full screen */
+  background-image: url('images/Service.png'); /* Add your background image here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Optional: keeps the background fixed when scrolling */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  min-height: 55vh; /* Ensure section covers full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the content */
+  position: relative;
+  width: 100%; /* Ensure full screen width */
+}
+
+/* Heading Styling */
+.services .heading {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #fff; /* White text for visibility */
+}
+
+.services .heading span {
+  color: black;
+}
+
+/* Box Container Styling */
+.services .box-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Individual Box Styling */
+.services .box {
+  width: 250px;
+  height: 350px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.services .box i {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Box Title */
+.services .box h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Box Description */
+.services .box p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effects for Box */
+.services .box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.services .box:hover i {
+  color: #ff3d00; /* Change icon color on hover */
+}
+
+.services .box:hover p {
+  color: #333; /* Change paragraph color on hover */
+}
+
+/* Centering the Section */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.services {
+  width: 100%;
+  max-width: 100%; /* Ensure full screen width */
+  margin: 0 auto;
+  padding: 0; /* No extra padding, to cover full screen */
+  position: relative;
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  .services {
+    min-height: 100vh; /* Ensure it covers full screen height on mobile */
+  }
+
+  .services .heading {
+    font-size: 28px; /* Smaller heading size on mobile */
+    margin-bottom: 10px;
+  }
+
+  .services .box-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .services .box {
+    width: 90%; /* Make boxes take up more space on mobile */
+    margin-bottom: 20px;
+    height: auto; /* Allow boxes to adjust height as needed */
+  }
+
+  .services .box i {
+    font-size: 40px; /* Smaller icons for mobile */
+  }
+
+  .services .box h3 {
+    font-size: 20px; /* Smaller title text */
+  }
+
+  .services .box p {
+    font-size: 14px; /* Smaller paragraph text */
+  }
+}
+
+/* Ensure responsiveness for very small mobile screens (e.g., portrait mode) */
+@media (max-width: 480px) {
+  .services .box-container {
+    padding: 10px; /* Add some padding for very small screens */
+  }
+
+  .services .box {
+    width: 100%; /* Take up the full width */
+    margin-bottom: 15px;
+  }
+
+  .services .box i {
+    font-size: 35px; /* Even smaller icons for small screens */
+  }
+
+  .services .box h3 {
+    font-size: 18px; /* Even smaller title text */
+  }
+
+  .services .box p {
+    font-size: 12px; /* Smaller paragraph text */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container to split the screen into two halves */
+.split-container {
+  
+  display: flex;
+  justify-content: space-between;
+  width: 100vw; /* Full width of the viewport */
+  height: 40vh; /* Full height of the viewport */
+  margin-left: -8vw; /* Shift the container slightly to the left */
+  padding: 0; /* Remove any padding */
+  box-sizing: border-box; /* Ensure padding and border do not affect width/height */
+  overflow: hidden; /* Prevent overflow from content */
+  
+}
+
+/* About Us Section - Left Side */
+.about-us-section {
+  flex: 1; /* Each section takes up half of the width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%; /* Ensure it takes up the full height */
+  padding: 20px;
+  
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Testimonial Section - Right Side */
+.testimonial-section {
+  flex: 1; /* Each section takes up half of the width */
+  /*background-image: url('images/test1.jpg');*/
+  background-color: #d5f5e2;
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: 100%; /* Ensure it takes up the full height */
+  padding: 20px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for both sections */
+.about-us-section:hover, .testimonial-section:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* About Us Section Header */
+.about-us-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: rgb(10, 0, 0);
+}
+
+.about-us-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.info-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.info-button:hover {
+  background-color: #555;
+}
+
+
+
+.book .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  align-items: center;
+}
+
+.book .row .image{
+  flex:1 1 30rem;
+}
+
+.book .row .image img{
+  width:100%;
+}
+
+.book .row form{
+  flex:1 1 40rem;
+  padding:2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border-radius: 15px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.500);
+}
+.book .row form:hover{
+  box-shadow: 0 1rem 2rem rgb(0, 0, 0);
+}
+.book .row form .inputBox{
+  padding:.5rem 0;
+}
+
+.book .row form .inputBox input{
+  width:100%;
+  padding:1rem;
+  border:.1rem solid rgba(0,0,0,.1);
+  font-size: 1.7rem;
+  color:#333;
+  text-transform: none;
+  
+}
+
+.book .row form .inputBox h3{
+  font-size: 2rem;
+  padding:1rem 0;
+  color:#666;
+}
+.book .row form .inputBox h3 i{
+  color:var(--anycolor);
+}
+
+
+
+
+/* Counter Stats Section */
+.counter-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+  gap: 3rem; /* Adding a gap between stats */
+  font-family: 'Roboto', sans-serif; /* Elegant font for the counter */
+  margin-top: 50px;  /* Add top margin to space it below the testimonial section */
+}
+
+.stat {
+  text-align: center;
+  background: rgba(223, 176, 89, 0.548);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  letter-spacing: 1px; /* Slight letter spacing for a clean look */
+  font-weight: 400; /* Lighter font weight for better readability */
+}
+
+.stat:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-value {
+  font-size: 4rem;
+  font-weight: 700;
+  color:black;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Make numbers stand out */
+}
+
+.stat p {
+  font-size: 1.6rem;
+  color: #555;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+  .counter-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: white;  /* White background */
+  color: black;             /* Black text color */
+  padding: 40px 0;          /* Padding for top and bottom */
+  text-align: center;       /* Center the content */
+}
+
+.footer-social {
+  margin-bottom: 20px;
+}
+
+.footer-social h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.footer-social a {
+  margin: 0 15px;
+  font-size: 24px;  /* Size of the social media icons */
+  color: black;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #0073e6;  /* Change color on hover (you can adjust this to any color) */
+  transform: scale(1.1);  /* Slightly enlarge the icons */
+}
+
+.footer-links {
+  margin: 20px 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;  /* Space between links */
+}
+
+.footer-links li {
+  display: inline-block;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: black;  /* Black text for links */
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #0073e6;  /* Hover color for links */
+  transform: translateY(-5px);  /* Lift the link on hover */
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 14px;
+  color: gray;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+
+
