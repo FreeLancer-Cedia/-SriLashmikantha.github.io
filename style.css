@@ -116,7 +116,7 @@ header {
 
 
 .logo img {
-  max-width: 350px; /* Adjust this value as needed */
+  max-width: 300px; /* Adjust this value as needed */
   height: auto; /* Keep the aspect ratio of the logo */
 }
 
@@ -161,6 +161,7 @@ header .navbar a:hover {
   top: 200px;  /* Distance from the bottom of the screen */
   right: 20px;   /* Distance from the right side of the screen */
   z-index: 1000; /* Ensure they are always on top of other elements */
+  margin-top: 600px;
 }
 
 .fixed-icons .icon {
@@ -217,7 +218,7 @@ header .navbar a:hover {
   padding: 0 20px;
   text-align: center;
   overflow: hidden;
-  margin-top: 120px; /* Adjust this value based on your header height */
+  margin-top: 150px; /* Adjust this value based on your header height */
 }
 
 
