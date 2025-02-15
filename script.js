@@ -5,6 +5,13 @@ const navbar = document.querySelector('.navbar');
 menuBar.addEventListener('click', () => {
     navbar.classList.toggle('active'); // Toggle the 'active' class on the navbar
 });
+const menuItems = document.querySelectorAll('.navbar a');
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        navbar.classList.remove('active'); // Close the navbar by removing 'active' class
+    });
+});
+
 
 // Image Slider
 const imgButtons = document.querySelectorAll('.img-btn');
@@ -58,84 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Get the box container
-const boxContainer = document.querySelector('.packages .box-container');
-const totalPackages = document.querySelectorAll('.packages .box').length;
-const visiblePackages = 5; // Number of packages visible at a time
-let currentIndexPackages = 0; // Current index for packages
-
-// Function to slide the packages
-function slidePackages() {
-    // Calculate the new scroll position to show the next 5 packages (each package takes 20% of the width)
-    const scrollPosition = (currentIndexPackages * (boxContainer.scrollWidth / totalPackages));
-
-    // Smoothly scroll to the new position
-    boxContainer.scrollTo({
-        left: scrollPosition,
-        behavior: 'smooth'
-    });
-
-    // Update the current index to show the next 5 packages
-    currentIndexPackages = (currentIndexPackages + visiblePackages) % totalPackages; // Wrap around if index exceeds total packages
-}
-
-// Auto slide every 5 seconds (for packages)
-setInterval(slidePackages, 5000); // Change every 5 seconds
-
-// Manual slide buttons
-document.querySelector('.scroll-btn-left').addEventListener('click', () => {
-    currentIndexPackages = (currentIndexPackages - visiblePackages + totalPackages) % totalPackages; // Move back 5 packages
-    slidePackages();
-});
-
-document.querySelector('.scroll-btn-right').addEventListener('click', () => {
-    slidePackages(); // Move forward 5 packages
-});
-
-// Carousel for packages: Show 4 visible at once and auto-slide every 5 seconds
-document.addEventListener("DOMContentLoaded", function() {
-    const boxContainer = document.querySelector('.packages .box-container');
-    const boxes = document.querySelectorAll('.packages .box');
-    let currentIndex = 0;
-    const totalBoxes = boxes.length;
-    const visibleCount = 4; // Number of visible images initially
-
-    // Function to show a specific box
-    function showBox(index) {
-        boxes.forEach((box, i) => {
-            if (i >= index && i < index + visibleCount) {
-                box.classList.add('visible');
-            } else {
-                box.classList.remove('visible');
-            }
-        });
-    }
-
-    // Initially show the first 4 boxes
-    showBox(currentIndex);
-
-    // Automatic slide (after 5 seconds, shift by 1)
-    setInterval(function() {
-        currentIndex = (currentIndex + 1) % (totalBoxes - visibleCount + 1);
-        showBox(currentIndex);
-    }, 5000); // Every 5 seconds
-
-    // Manual navigation buttons
-    const nextBtn = document.createElement('button');
-    nextBtn.textContent = 'Next';
-    nextBtn.classList.add('scroll-btn');
-    nextBtn.onclick = function() {
-        currentIndex = (currentIndex + 1) % (totalBoxes - visibleCount + 1);
-        showBox(currentIndex);
-    };
-
-    const prevBtn = document.createElement('button');
-    prevBtn.textContent = 'Prev';
-    prevBtn.classList.add('scroll-btn');
-    prevBtn.onclick = function() {
-        currentIndex = (currentIndex - 1 + totalBoxes - visibleCount + 1) % (totalBoxes - visibleCount + 1);
-        showBox(currentIndex);
-    };
-
-   
+AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    easing: 'ease', // Easing for the animation
+    once: true, // Animation occurs only once
 });
