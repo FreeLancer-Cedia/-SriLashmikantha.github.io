@@ -31,7 +31,9 @@
   background:var(--anycolor);
   color:#fff;
 }
-
+.contact {
+  margin-top: -200px; /* Adjust this value as needed */
+}
 
 .contact-info {
   font-size: 16px;
@@ -194,7 +196,7 @@ header .navbar a:hover {
   top: 200px;  /* Distance from the bottom of the screen */
   right: 20px;   /* Distance from the right side of the screen */
   z-index: 1000; /* Ensure they are always on top of other elements */
-  margin-top: 500px;
+  margin-top: 330px;
 }
 
 .fixed-icons .icon {
@@ -416,6 +418,7 @@ header .navbar a:hover {
 /* Box Container Styling */
 .packages .box-container {
   display: flex;
+
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
@@ -534,7 +537,7 @@ html, body {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: -10px;
 }
 
 /* Individual Box Styling */
@@ -830,8 +833,12 @@ footer {
   text-align: center; /* Center the content */
   margin-top: 0; /* Removed unnecessary margin-top */
   margin-bottom: 0;
+  margin-top: -130px;
 
 }
 
+.About {
+  margin-top: -100px;
+}
 
 

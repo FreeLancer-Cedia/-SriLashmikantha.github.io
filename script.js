@@ -70,3 +70,30 @@ AOS.init({
     easing: 'ease', // Easing for the animation
     once: true, // Animation occurs only once
 });
+
+// Variables to track touch positions
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Function to handle swipe detection
+function handleSwipe() {
+    if (touchEndX < touchStartX) {
+        // Swiped left (next image)
+        currentImageIndex = (currentImageIndex + 1) % totalImages;
+    }
+    if (touchEndX > touchStartX) {
+        // Swiped right (previous image)
+        currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+    }
+    updateImage(currentImageIndex);
+}
+
+// Event listeners for touch events on the image container
+imgContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+});
+
+imgContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+});
