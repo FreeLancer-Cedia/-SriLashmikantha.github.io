@@ -13,18 +13,17 @@
   transition: all .2s linear;
 }
 
-/* Initial hidden state: element starts off-screen */
-.slide-left {
-  opacity: 0;
-  transform: translateX(-100%); /* Move the element to the left off-screen */
-  transition: opacity 1s ease, transform 1s ease; /* Smooth transition for opacity and transform */
+.img-container img {
+  width: 100%;
+  height: auto;
+  touch-action: pan-x; /* Allow horizontal swiping */
 }
 
-/* When the element becomes visible, move it to its original position */
-.slide-left.active {
-  opacity: 1; /* Make it visible */
-  transform: translateX(0); /* Move to the original position */
+.img-btn {
+  cursor: pointer;
+  touch-action: manipulation;
 }
+
 
 
 *::selection{
