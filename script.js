@@ -46,24 +46,44 @@ function autoSlide() {
 setInterval(autoSlide, 3000); // Change image every 3 seconds
 
 // Initialize the first image and active button
-updateImage(currentImageIndex);
+updateImage(currentImageIndex);                 
 
 // Stats Counter (Optional: Assuming it's for some number counting animation)
 document.addEventListener("DOMContentLoaded", function () {
     const stats = document.querySelectorAll('.stat-value');
     stats.forEach(stat => {
-        const target = +stat.getAttribute('data-target');
-        let count = 0;
-        const interval = setInterval(() => {
-            stat.textContent = count;
-            if (count >= target) {
-                clearInterval(interval);
-            } else {
-                count++;
-            }
-        }, 50); // Adjusted speed to 50ms for smoother effect
+        const targetData = stat.getAttribute('data-target');
+        
+        // Check if there's a "+" symbol by splitting at the comma
+        if (targetData.includes(',')) {
+            const [target, symbol] = targetData.split(',');
+            const numberTarget = +target; // The target number
+            let count = 0;
+
+            const interval = setInterval(() => {
+                stat.innerHTML = `<span class="plus">${count}</span>${symbol}`; // Display "+" before number
+                if (count >= numberTarget) {
+                    clearInterval(interval);
+                } else {
+                    count++;
+                }
+            }, -100); // Adjust speed
+        } else {
+            const target = +targetData;
+            let count = 0;
+
+            const interval = setInterval(() => {
+                stat.textContent = count; // Only update the number without "+" sign
+                if (count >= target) {
+                    clearInterval(interval);
+                } else {
+                    count++;
+                }
+            }, -100); // Adjust speed
+        }
     });
 });
+
 
 AOS.init({
     duration: 1000, // Animation duration in milliseconds
