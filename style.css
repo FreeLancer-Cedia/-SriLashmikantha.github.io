@@ -12,6 +12,26 @@
   text-decoration: none;
   transition: all .2s linear;
 }
+.gmap {
+  width: 100%;
+  max-width: 1200px; /* Optional: Adjust the max-width if you want to limit its size */
+  margin: 0 auto; /* Center the container */
+  border-radius: 20px; /* Adds rounded corners to the container */
+  overflow: hidden; /* Ensures the iframe content stays inside the rounded corners */
+ 
+}
+
+
+.gmap iframe {
+  width: 100%;
+  height: 300px; /* Keep the height as you need */
+  border: 0; /* Removes iframe border */
+  border-radius: 20px; /* Rounds the iframe's corners */
+ 
+  
+}
+
+
 
 .img-container img {
   width: 100%;
@@ -31,7 +51,10 @@
   color:#fff;
 }
 .contact {
-  margin-top: -200px; /* Adjust this value as needed */
+  margin-top: -150px; /* Adjust this value as needed */
+    
+    
+    
 }
 
 .contact-info {
@@ -244,6 +267,9 @@ header .navbar a:hover {
   text-align: center;
   overflow: hidden;
   margin-top: 127px;
+  margin-left: 120px;
+  margin-right: 120px;
+
  
 }
 
@@ -323,7 +349,12 @@ header .navbar a:hover {
   .home .content p {
     font-size: 1.2rem;
   }
-
+  /* Mobile Screen Adjustments */
+   /* Mobile Screen Adjustments */
+   .home {
+    margin-left: 10px; /* Remove margins on mobile */
+    margin-right: 10px; /* Remove margins on mobile */
+  }
   /* Show the menu icon */
   #menu-bar {
     display: block;
@@ -677,6 +708,10 @@ html, body {
   align-items: center; /* Center the content vertically */
   color: white;
   position: relative; /* Ensures the positioning doesn't overlap with other sections */
+  margin-left: 125px;
+  margin-right: 125px;
+
+  
 
 }
 
@@ -728,6 +763,8 @@ html, body {
     padding: 2rem 20px; /* Add padding for mobile view */
     margin-top: 5rem; /* Add space on top */
     margin-bottom: 2rem; /* Ensure space at the bottom */
+    margin-left: 20px;
+  margin-right: 20px;
   }
 
   .stat {
@@ -825,13 +862,28 @@ footer {
 
 /* Review Section Styling */
 .Review {
-  padding: 60px 0;
+  
   text-align: center; /* Center the content */
   margin-top: 0; /* Removed unnecessary margin-top */
   margin-bottom: 0;
-  margin-top: -100px;
-
+  margin-top: -120px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+     
+   
 }
+@media (max-width: 768px) {
+  .Review {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+
+
+
+
 
 .About {
   margin-top: -70px;
@@ -932,6 +984,7 @@ footer {
       padding: 40px 5%; /* Adjust padding for mobile */
   }
 }
+
 
 
 
