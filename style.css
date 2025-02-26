@@ -670,13 +670,16 @@ html, body {
   margin-top: 30px;  /* Add top margin to space it below the testimonial section */
   padding: 0; /* Remove padding so the section covers the full screen */
   background-image: url("images/counts.jpg");
+  border-radius: 15px;
   background-size: cover;
   background-position: center;
-  min-height: 30vh; /* Set a min-height to prevent overlap with other sections */
+  min-height: 20vh; /* Set a min-height to prevent overlap with other sections */
   align-items: center; /* Center the content vertically */
   color: white;
   position: relative; /* Ensures the positioning doesn't overlap with other sections */
+
 }
+
 
 /* Stat (Without box styling) */
 .stat {
@@ -713,6 +716,7 @@ html, body {
   font-weight: 500;
   letter-spacing: 0.5px;
   margin-top: 10px;
+  position: relative;
 }
 
 /* Media Queries for Smaller Screens */
