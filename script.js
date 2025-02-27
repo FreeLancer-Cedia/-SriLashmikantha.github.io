@@ -1,3 +1,8 @@
+window.onload =function(){
+    if(window.innerWidth >=1024){
+        document.body.style.zoom = "125%";
+    }
+}
 // Handle mobile menu toggle
 const menuBar = document.getElementById('menu-bar');
 const navbar = document.querySelector('.navbar');
