@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap');
 :root{
   --anycolor:#0062ff;
+ 
 }
 
 *{
@@ -12,25 +13,23 @@
   text-decoration: none;
   transition: all .2s linear;
 }
+
 .gmap {
   width: 100%;
-  max-width: 1200px; /* Optional: Adjust the max-width if you want to limit its size */
+  max-width: 1400px; /* Increased max-width for a larger map */
   margin: 0 auto; /* Center the container */
-  border-radius: 20px; /* Adds rounded corners to the container */
-  overflow: hidden; /* Ensures the iframe content stays inside the rounded corners */
- 
+  border-radius: 20px; /* Rounded corners */
+  overflow: hidden; /* Ensures the iframe stays within borders */
+  padding: 10px; /* Optional: Adds some spacing inside */
 }
 
-
+/* Adjust iframe size */
 .gmap iframe {
-  width: 100%;
-  height: 300px; /* Keep the height as you need */
-  border: 0; /* Removes iframe border */
-  border-radius: 20px; /* Rounds the iframe's corners */
- 
-  
+  width: 101%;
+  height: 400px; /* Increased height for better visibility */
+  border: 0;
+  border-radius: 20px;
 }
-
 
 
 .img-container img {
@@ -131,6 +130,7 @@ section{
 body {
   padding-top: 80px; /* Adjust the padding-top value based on your header height */
   background-color: #f7f7f7;
+  margin: 20px;
   
   color: #333;
   font-size: 16px;
@@ -348,7 +348,7 @@ header .navbar a:hover {
   .home .content p {
     font-size: 1.2rem;
   }
-
+ 
   /* Show the menu icon */
   #menu-bar {
     display: block;
@@ -859,24 +859,19 @@ footer {
   margin-top: 0; /* Removed unnecessary margin-top */
   margin-bottom: 0;
   margin-top: -120px;
+  width: 100%;
 
   
      
    
 }
-                                                                                                                                      
-
-
-
-
-
 
 .About {
   margin-top: -70px;
 }
 
 .About {
-  padding: 50px 10%;
+  padding: 50px 8%;
 }
 
 .row {
@@ -970,6 +965,8 @@ footer {
       padding: 40px 5%; /* Adjust padding for mobile */
   }
 }
+
+
 
 
 
