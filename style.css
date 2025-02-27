@@ -181,16 +181,19 @@ html, body {
 header .navbar a {
   color: #0073e6;
   text-decoration: solid;
-  font-size: 24px;
+  font-size: 22x;
   padding: 8px 16px;
- 
+  background-color: rgba(0, 0, 0, 0.89);
+  color: #fff;
+  border-radius: 15px;
   display: inline-block;
 }
 
 header .navbar a:hover {
   background-color: black;
-  color: #fff;
-  border-radius: 4px;
+  color: orange;
+  border-radius: 2px;
+  transform: scale(1.1);  /* Scale up on hover */
 }
 
 /* Mobile Menu Icon */
@@ -360,7 +363,7 @@ header .navbar a:hover {
     top: 100px;
     left: 0;
     width: 100%;
-    background-image: url("images/Service.png");
+    background-color:white;
     background-size: cover;
   background-position: center;
     flex-direction: column;
@@ -375,13 +378,14 @@ header .navbar a:hover {
 
   /* Navbar links */
   .navbar a {
-    color: black;
+    color: rgb(17, 17, 17);
     text-decoration: none;
     font-size: 18px;
     padding: 10px 20px;
     text-align: center;
     display: block;
     width: 100%;
+    
   }
 
   .navbar a:hover {
@@ -964,7 +968,6 @@ footer {
       padding: 40px 5%; /* Adjust padding for mobile */
   }
 }
-
 
 
 
